@@ -1558,47 +1558,54 @@
       <span class="cta-pill">✓ Local FL team on-call</span>
     </div>
     <div class="reveal reveal-delay-3">
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" placeholder="Jane Smith" autocomplete="name" required aria-required="true">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <input type="hidden" name="access_key" value="5ba146e0-15b3-4860-8a82-1120b77ce3b3">
+        
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="city">Location / City</label>
+            <input type="text" id="city" name="city" placeholder="Tampa, FL" autocomplete="address-level2">
+          </div>
+          <div class="form-group">
+            <label for="biztype">Type of Business</label>
+            <select id="biztype" name="business_type">
+              <option value="" disabled selected>Select your industry</option>
+              <option>Manufacturing / Warehouse</option>
+              <option>Gym / Fitness Center</option>
+              <option>Sports Club</option>
+              <option>Corporate Office</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@acmecorp.com" autocomplete="email" required aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(813) 555-0100" autocomplete="tel">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="company">Company Name</label>
-          <input type="text" id="company" placeholder="Acme Corp" autocomplete="organization">
+        
+        <div aria-live="polite" aria-atomic="true" id="form-status" class="sr-only"></div>
+        
+        <div class="form-submit">
+          <button class="btn-primary" type="submit" aria-label="Lock in your facility upgrade - it's free">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+            Lock In Your Upgrade — It's Free
+          </button>
+          <p class="form-note">Takes 2 minutes. We come to you. Zero cost, zero commitment.</p>
         </div>
-        <div class="form-group">
-          <label for="city">Location / City</label>
-          <input type="text" id="city" placeholder="Tampa, FL" autocomplete="address-level2">
-        </div>
-        <div class="form-group">
-          <label for="biztype">Type of Business</label>
-          <select id="biztype">
-            <option value="" disabled selected>Select your industry</option>
-            <option>Manufacturing / Warehouse</option>
-            <option>Gym / Fitness Center</option>
-            <option>Sports Club</option>
-            <option>Corporate Office</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="jane@acmecorp.com" autocomplete="email" required aria-required="true">
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="(813) 555-0100" autocomplete="tel">
-        </div>
-      </div>
-      <div aria-live="polite" aria-atomic="true" id="form-status" class="sr-only"></div>
-      <div class="form-submit">
-        <button class="btn-primary" type="submit" onclick="handleSubmit()" aria-label="Lock in your facility upgrade - it's free">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true" focusable="false"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
-          Lock In Your Upgrade — It's Free
-        </button>
-        <p class="form-note">Takes 2 minutes. We come to you. Zero cost, zero commitment.</p>
-      </div>
+      </form>
     </div>
   </div>
 </section>
